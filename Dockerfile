@@ -1,5 +1,9 @@
 FROM n8nio/n8n:latest
 
+ENV N8N_HOST=0.0.0.0
+ENV N8N_PORT=5678
+ENV N8N_PROTOCOL=http
+
 EXPOSE 5678
 
-CMD ["node", "/usr/local/bin/n8n", "start"]
+CMD ["n8n", "start"]
